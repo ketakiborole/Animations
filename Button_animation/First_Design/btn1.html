@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="btn1.css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+</head>
+
+
+
+<body>
+    <div class="container middle">
+        <button id="btn-upload" onclick="upload()" type="button" class="btn-upload " data-text-swap="Complete">Upload</button>
+        <span id= "upload" class="upload-start">
+            <p>1 file uploaded</p>
+            <img src="successgif.gif"/>
+        </span>
+        
+    </div>
+</body>
+
+<script>
+    var btnUpload = $("#btn-upload");
+    function upload() {
+
+        btnUpload.removeClass('btn-upload-hover')
+        btnUpload.addClass('horizontal-fill');
+        btnUpload.addClass('success');
+            var el = btnUpload;
+            if (el.text() == el.data("text-swap")) {
+                el.text(el.data("text-original"));
+            } else {
+                el.data("text-original", el.text());
+                el.text(el.data("text-swap"));
+            }
+        
+        var upload = $("#upload");
+        upload.removeClass("upload-start");
+        upload.addClass("upload-success");
+
+    };
+    
+    btnUpload.mouseover(function(){
+            $(this).addClass('btn-upload-hover')
+    
+    })
+
+</script>
+
+</html>

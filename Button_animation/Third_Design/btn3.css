@@ -1,0 +1,51 @@
+.middle{
+    text-align: center !important;
+    margin-top: 10% !important;
+ }
+.btn-download{
+    border:2px solid dodgerblue;
+    background-color: white !important;
+    color:dodgerblue;
+    font-weight: 500 !important;
+    padding:10px 20px 10px 20px;
+    position: relative;
+} 
+.btn-open{
+    border:2px solid dodgerblue;
+    background-color: white !important;
+    color:dodgerblue;
+   font-weight: 500 !important;
+   padding: 10px 45px 10px 45px;
+    display:none;
+} 
+
+.circle-icon {
+    background: transparent;
+    position: relative;
+    font-size: 32px !important;
+    color: dodgerblue;
+    cursor: pointer;
+    position: absolute;
+    z-index: 1;
+    padding-left: 17px;
+    line-height: 1.2;
+}
+@keyframes spin{
+    0%{
+        transform: rotate(360deg);
+        transition-duration: 6s;
+    }
+}
+.animationButton:hover, .animationButton:focus, .animationButton:active {
+    animation: hover-push 0.3s linear 1;
+    cursor: pointer;
+  }
+  
+  @keyframes hover-push {
+    50% {
+      transform: scale(0.8);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
